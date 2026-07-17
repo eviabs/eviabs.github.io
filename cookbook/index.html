@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="he" dir="rtl">
 <head>
-<meta charset="utf-8">
-<title>Cookbook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>המטבח של סבתא אידה</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<p>Cookbook - under construction</p>
+
+<header class="site-header">
+  <div class="header-inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#top" class="brand" id="brandLink">המטבח של סבתא אידה</a>
+    <div class="search-wrap">
+      <input type="search" id="searchInput" placeholder="חיפוש מתכון או רכיב..." aria-label="חיפוש">
+    </div>
+  </div>
+  <nav class="cat-nav" id="catNav">
+    <button class="cat-btn active" data-cat="all">הכל</button>
+    <!-- categories injected -->
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="heroSection">
+    <div class="hero-image">
+      <img src="images/cover.jpg" alt="סבתא אידה במטבח">
+    </div>
+    <div class="hero-text">
+      <h1>המטבח של סבתא אידה</h1>
+      <p class="hero-sub">ספר המתכונים המשפחתי</p>
+      <button class="btn-primary" id="startBrowsing">לכל המתכונים ↓</button>
+    </div>
+  </section>
+
+  <section class="dedication" id="dedicationSection">
+    <div class="dedication-inner">
+      <h2 id="dedHeading"></h2>
+      <div id="dedParagraphs"></div>
+      <p class="signature" id="dedSignature"></p>
+    </div>
+  </section>
+
+  <div id="categoriesContainer">
+    <!-- category sections injected here -->
+  </div>
+
+  <section class="empty-state" id="emptyState" hidden>
+    <p>לא נמצאו מתכונים תואמים לחיפוש 🔍</p>
+  </section>
+
+</main>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="סגירה">✕</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>ספר המתכונים של סבתא אידה • נאסף ונשמר באהבה 🩷</p>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn" aria-label="חזרה למעלה">↑</button>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
