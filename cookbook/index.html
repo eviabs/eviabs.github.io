@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>המטבח של סבתא אידה</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,6 +22,7 @@
     <div class="search-wrap">
       <input type="search" id="searchInput" placeholder="חיפוש מתכון או רכיב..." aria-label="חיפוש">
     </div>
+    <a href="book/ida-cookbook.pdf" class="pdf-link" target="_blank" rel="noopener">📄 <span>הספר המקורי (PDF)</span></a>
   </div>
   <nav class="cat-nav" id="catNav">
     <button class="cat-btn active" data-cat="all">הכל</button>
@@ -27,8 +33,11 @@
 <main id="top">
 
   <section class="hero" id="heroSection">
-    <div class="hero-image">
-      <img src="images/cover.jpg" alt="סבתא אידה במטבח">
+    <div class="hero-media">
+      <div class="hero-media-bg">
+        <img src="images/cover.jpg" alt="" aria-hidden="true">
+      </div>
+      <img class="hero-portrait" src="images/cover.jpg" alt="סבתא אידה במטבח">
     </div>
     <div class="hero-text">
       <h1>המטבח של סבתא אידה</h1>
@@ -64,6 +73,7 @@
 
 <footer class="site-footer">
   <p>ספר המתכונים של סבתא אידה • נאסף ונשמר באהבה 🩷</p>
+  <p><a href="book/ida-cookbook.pdf" target="_blank" rel="noopener">להורדת/צפייה בספר המקורי כ-PDF</a></p>
 </footer>
 
 <button class="scroll-top" id="scrollTopBtn" aria-label="חזרה למעלה">↑</button>
