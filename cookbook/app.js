@@ -16,6 +16,17 @@
   let activeCategory = "all";
   let searchTerm = "";
 
+  const DIFFICULTY_LEVELS = { "קל": 1, "בינוני": 2, "מתקדם": 3, "מורכב": 3 };
+
+  function difficultyMeter(difficulty) {
+    const level = DIFFICULTY_LEVELS[difficulty] || 2;
+    let bars = "";
+    for (let i = 1; i <= 3; i++) {
+      bars += `<span class="diff-bar${i <= level ? " filled" : ""}"></span>`;
+    }
+    return `<span class="diff-meter" aria-hidden="true">${bars}</span>`;
+  }
+
   // ---------- Fill dedication ----------
   document.getElementById("dedHeading").textContent = BOOK.dedication.heading;
   document.getElementById("dedParagraphs").innerHTML = BOOK.dedication.paragraphs
@@ -76,7 +87,7 @@
         <div class="card-meta">
           <span>⏱ ${escapeHtml(recipe.totalTime)}</span>
           <span>🍽 ${escapeHtml(recipe.servings)}</span>
-          <span>⭐ ${escapeHtml(recipe.difficulty)}</span>
+          <span class="meta-difficulty">${difficultyMeter(recipe.difficulty)} ${escapeHtml(recipe.difficulty)}</span>
         </div>
       </div>
     `;
@@ -131,7 +142,7 @@
           <div class="meta-item"><span class="meta-label">בישול</span><span class="meta-value">${escapeHtml(recipe.cookTime)}</span></div>
           <div class="meta-item"><span class="meta-label">סה"כ</span><span class="meta-value">${escapeHtml(recipe.totalTime)}</span></div>
           <div class="meta-item"><span class="meta-label">מנות</span><span class="meta-value">${escapeHtml(recipe.servings)}</span></div>
-          <div class="meta-item"><span class="meta-label">רמת קושי</span><span class="meta-value">${escapeHtml(recipe.difficulty)}</span></div>
+          <div class="meta-item"><span class="meta-label">רמת קושי</span><span class="meta-value">${difficultyMeter(recipe.difficulty)} ${escapeHtml(recipe.difficulty)}</span></div>
         </div>
         <h3 class="section-title">רכיבים</h3>
         ${ingredientsHtml}
