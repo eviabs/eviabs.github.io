@@ -1,84 +1,350 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>המטבח של סבתא אידה</title>
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-<link rel="shortcut icon" href="images/favicon.ico">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css">
+    <!-- Metadata -->
+    <meta property="og:title" content="eviabs | Evyatar Ben-Shitrit" />
+    <meta property="og:site_name" content="eviabs" />
+    <meta property="og:url" content="https://eviabs.com" />
+    <meta property="og:description" content="My online portfolio. Check out my latest developments and projects." />
+    <meta property="og:image" itemprop="image" content="https://eviabs.com/img/webpage.png" />
+    <meta property="og:image:secure_url" itemprop="image" content="https://eviabs.com/img/webpage.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta charset="utf-8">
+
+    <title>eviabs | Evyatar Ben-Shitrit</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="eviabs, evyatar, ben-shitrit, evia, portfolio, projects, developer, software, programmer, engineer, android, java, python">
+    <meta name="description" content="My online portfolio. Check out my latest developments and projects.">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121798497-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121798497-1');
+    </script>
+
+    <!-- Favicons -->
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="img/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="img/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <link rel="apple-touch-icon" href="img/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/favicon-144.png">
+    <meta name="msapplication-config" content="img/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Devicon CSS File -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <button class="menu-toggle" id="menuToggle" aria-label="תפריט">
-      <span></span><span></span><span></span>
-    </button>
-    <a href="#top" class="brand" id="brandLink">המטבח של סבתא אידה</a>
-    <div class="search-wrap">
-      <input type="search" id="searchInput" placeholder="חיפוש מתכון או רכיב..." aria-label="חיפוש">
+<!--==========================
+  Header
+============================-->
+<header id="header">
+    <div class="container-fluid">
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
     </div>
-    <a href="book/ida-cookbook.pdf" class="pdf-link" target="_blank" rel="noopener">📄 <span>הספר המקורי (PDF)</span></a>
-  </div>
-  <nav class="cat-nav" id="catNav">
-    <button class="cat-btn active" data-cat="all">הכל</button>
-    <!-- categories injected -->
-  </nav>
-</header>
+</header><!-- #header -->
 
-<main id="top">
+<main id="main">
 
-  <section class="hero" id="heroSection">
-    <div class="hero-media">
-      <div class="hero-media-bg">
-        <img src="images/cover.jpg" alt="" aria-hidden="true">
-      </div>
-      <img class="hero-portrait" src="images/cover.jpg" alt="סבתא אידה במטבח">
-    </div>
-    <div class="hero-text">
-      <h1>המטבח של סבתא אידה</h1>
-      <p class="hero-sub">ספר המתכונים המשפחתי</p>
-      <button class="btn-primary" id="startBrowsing">לכל המתכונים ↓</button>
-    </div>
-  </section>
+    <!--==========================
+      Intro Section
+    ============================-->
+    <section id="intro" class="section-bg">
+        <div id="wrapper-particles">
+            <div id="particles-js"></div>
+            <div id="content-particles">
 
-  <section class="dedication" id="dedicationSection">
-    <div class="dedication-inner">
-      <h2 id="dedHeading"></h2>
-      <div id="dedParagraphs"></div>
-      <p class="signature" id="dedSignature"></p>
-    </div>
-  </section>
+                <!-- Upper wrapper for Logo-->
+                <div class="wrapper"></div>
 
-  <div id="categoriesContainer">
-    <!-- category sections injected here -->
-  </div>
+                <!-- Logo with social media links -->
+                <div class="container">
+                    <div id="logo">
+                        <h1>
+                            <a href="#intro" class="scrollto">
+                                <span class="logo-first">EVIA</span>
+                                <span class="logo-last">BS</span>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/eviabs" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/eviabs" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                        <a href="https://www.facebook.com/evyabs" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://eviabs.com" target="_blank" class="site"><i class="fa fa-globe"></i></a>
+                        <a href="mailto:evyatarb@gmail.com" target="_blank" class="mail"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div> <!-- end of Logo with social media links -->
 
-  <section class="empty-state" id="emptyState" hidden>
-    <p>לא נמצאו מתכונים תואמים לחיפוש 🔍</p>
-  </section>
+                <!-- Lower wrapper for Logo-->
+                <div class="wrapper"></div>
+            </div>
 
+        </div>
+
+    </section><!-- #intro -->
+    <script src="lib/particles/particles.js"></script>
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about" class="section-bg">
+        <div class="container">
+            <header class="section-header">
+                <h3>About</h3>
+                <p>My name is <strong>Evyatar Ben-Shitrit</strong>. I've recently graduated with a B.Sc. in Computer
+                    Science from the Hebrew University of Jerusalem, and willing to join a great team as a software
+                    engineer. I'm very enthusiastic about the world of software and technology, and I love programming
+                    in different languages for different platforms.
+                </p>
+            </header>
+        </div>
+    </section><!-- #about -->
+
+
+    <!--==========================
+      Skills Section
+    ============================-->
+    <section id="skills" class="section-bg">
+        <div class="container">
+            <header class="section-header">
+                <h3>Skills</h3>
+            </header>
+
+            <div class="owl-carousel skills-carousel">
+                <div><i class="devicon-java-plain-wordmark"></i></div>
+                <div><i class="devicon-python-plain-wordmark"></i></div>
+                <div><i class="devicon-c-plain"></i></div>
+                <div><i class="devicon-cplusplus-plain"></i></div>
+                <div><i class="devicon-nodejs-plain-wordmark"></i></div>
+                <div><i class="devicon-android-plain-wordmark"></i></div>
+                <div><i class="devicon-html5-plain-wordmark"></i></div>
+                <div><i class="devicon-javascript-plain"></i></div>
+                <div><i class="devicon-css3-plain-wordmark"></i></div>
+            </div>
+
+        </div>
+    </section><!-- #skills -->
+
+    <!--==========================
+      Projects Section
+    ============================-->
+    <section id="projects"  class="section-bg" >
+        <div class="container">
+
+            <header class="section-header">
+                <h3 class="section-title">Projects</h3>
+            </header>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul id="projects-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-2018">2018</li>
+                        <li data-filter=".filter-2017">2017</li>
+                        <li data-filter=".filter-2016">2016</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row projects-container">
+
+                <!-- knokit -->
+                <div class="col-lg-4 col-md-6 projects-item filter-2018 wow fadeInUp">
+                    <div class="projects-wrap">
+                        <a href="https://github.com/eviabs/knockit" target="_blank">
+                            <figure>
+                                <img src="img/projects/knockit.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <div class="projects-info">
+                                <h4>knokit</h4>
+                                <h6>An Arduino-based device that senses door knocks, and notifies its attached app.</h6>
+                                <p>Arduino, Android, Java</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dicts -->
+                <div class="col-lg-4 col-md-6 projects-item filter-web filter-2018 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="projects-wrap">
+                        <a href="https://github.com/eviabs/Dicts" target="_blank">
+                            <figure>
+                                <img src="img/projects/Dicts.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <div class="projects-info">
+                                <h4>Dicts</h4>
+                                <h6>Android app that displays words definitions and translations from famous dictionaries on the web.</h6>
+                                <p>Node.js, Android, Java</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stories -->
+                <div class="col-lg-4 col-md-6 projects-item filter-2017 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="projects-wrap">
+                        <a href="http://www.sipurim.me/" target="_blank">
+                            <figure>
+                                <img src="img/projects/Stories.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <div class="projects-info">
+                                <h4>Stories</h4>
+                                <h6>A digital platform for creating interactive stories.</h6>
+                                <p>Node.js, HTML, Javascript, CSS, Android, Java,</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Downtify -->
+                <div class="col-lg-4 col-md-6 projects-item filter-2016 wow fadeInUp">
+                    <div class="projects-wrap">
+                        <a href="https://github.com/eviabs/Downtify" target="_blank">
+                            <figure>
+                                <img src="img/projects/Downtify.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="projects-info">
+                                <h4>Downtify</h4>
+                                <h6>Windows application for recording songs from Spotify, and saving them to your PC</h6>
+                                <p>C#</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Android Backup Guide -->
+                <div class="col-lg-4 col-md-6 projects-item filter-2017  wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="projects-wrap">
+                        <a href="https://eviabs.com/Android-Backup-and-Restore-Guide/" target="_blank">
+                            <figure>
+                                <img src="img/projects/Android_backup.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <div class="projects-info">
+                                <h4>Android Backup Guide</h4>
+                                <h6>Android applications backup and restore guide for non-rooted devices.</h6>
+                                <p>Android, HTML, Javascript, CSS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dummy -->
+                <div class="col-lg-4 col-md-6 projects-item filter-2018 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="projects-wrap">
+                        <!--<a href="#">-->
+                        <figure>
+                            <img src="#" class="img-fluid" alt="">
+                        </figure>
+                        <div class="projects-info">
+                            <h4>Current Project</h4>
+                            <h6>Coming soon...</h6>
+                            <p>tbd</p>
+                        </div>
+                        <!--</a>-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- #projects -->
 </main>
 
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" role="dialog" aria-modal="true">
-    <button class="modal-close" id="modalClose" aria-label="סגירה">✕</button>
-    <div class="modal-content" id="modalContent"></div>
-  </div>
-</div>
+<!--==========================
+  Footer
+============================-->
+<footer id="footer">
+    <div class="container">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/eviabs" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/eviabs" target="_blank" class="github"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/evyabs" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://eviabs.com" target="_blank" class="site"><i class="fa fa-globe"></i></a>
+            <a href="mailto:evyatarb@gmail.com" target="_blank" class="mail"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="copyright">
+            Last updated <strong>January 2019</strong>
+        </div>
+        <div class="credits">
+            <!-- =======================================================
+              Theme Name: BizPage
+              Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+              Author: BootstrapMade.com
+              License: https://bootstrapmade.com/license/
+            ======================================================= -->
+            Template <a href="https://bootstrapmade.com/">source</a>. Hosted on <a href="https://github.com/eviabs/eviabs.github.io">GitHub Pages</a>.
+        </div>
+    </div>
+</footer><!-- #footer -->
 
-<footer class="site-footer">
-  <p>ספר המתכונים של סבתא אידה • נאסף ונשמר באהבה 🩷</p>
-  <p><a href="book/ida-cookbook.pdf" target="_blank" rel="noopener">להורדת/צפייה בספר המקורי כ-PDF</a></p>
-</footer>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<button class="scroll-top" id="scrollTopBtn" aria-label="חזרה למעלה">↑</button>
+<!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
 
-<script src="data.js"></script>
-<script src="app.js"></script>
+<!-- Template Main Javascript File -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
